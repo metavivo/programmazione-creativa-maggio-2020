@@ -1,0 +1,19 @@
+void setup(){
+    size(700,400);
+    background(255);
+
+    font = loadFont("FFScala.ttf"); 
+    textFont(font); 
+    textSize(40);
+    text("word", 15, 30); 
+    fill(0, 102, 153);
+    text("word", 15, 60);
+    fill(0, 102, 153, 51);
+    text("word", 15, 90);
+  
+}
+
+void draw(){
+
+}
+
