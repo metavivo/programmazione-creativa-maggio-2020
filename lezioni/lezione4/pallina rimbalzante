@@ -1,0 +1,67 @@
+Ball ball1;
+
+void setup(){
+  size(700,400);
+  background(255);
+  smooth();
+
+  ball1 = new Ball(width/3, height/3, 2.5, 3);
+
+}
+
+void draw(){
+  background(255);
+
+  ball1.update();
+  
+  ball1.checkEdges();
+  
+  ball1.display();  
+
+}
+
+//*****************************************************
+
+class Ball {
+
+  PVector location;
+  PVector velocity;
+  float r;
+
+  Ball(float x, float y, float vx, float vy) {
+    location = new PVector(x, y);
+    velocity = new PVector(vx, vy);
+    r = 100;
+  }
+  
+//-----------------------------------------------------  
+
+  void update() {
+    location.add(velocity);
+  }
+
+//-----------------------------------------------------  
+
+  void checkEdges() {
+
+    if ((location.x > (width - r/2)) || (location.x < r/2)) {
+      velocity.x = velocity.x * -1;
+    }
+
+    if ((location.y > (height - r/2)) || (location.y < r/2)) {
+      velocity.y = velocity.y * -1;
+    }
+
+  }
+  
+//-----------------------------------------------------  
+
+    void display() {
+    stroke(100);
+    strokeWeight(4);
+    fill(0, 127);
+    ellipse(location.x, location.y, r, r);
+  }
+
+  
+}
