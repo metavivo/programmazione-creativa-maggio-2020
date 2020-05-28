@@ -14,11 +14,7 @@ void setup() {
   
   paintAxes();
 
-  
-
   paintPunto();
-
-
 
 }
 
