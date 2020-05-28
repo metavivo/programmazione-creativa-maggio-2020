@@ -1,4 +1,3 @@
-
 String content;
 int newX;
 int newY;
@@ -27,8 +26,6 @@ void setup() {
 
 void draw() {
 
-//  content = "Punto" + mouseX;
-  
   background(255);
   fill(0);
   
@@ -52,7 +49,6 @@ void draw() {
   line(30, height - 30 - pY, pX + 30, height - 30 - pY);
   fill(0);
   stroke(0);
-
   
 }
 
@@ -71,13 +67,6 @@ void paintAxes(){
   line(30, 10, 35, 20);
   
   KineticWord origine;
-/*
-  String content = "O";
-  int newX = 10;
-  int newY = height - 10;
-  String fontName = "AlBayan-48.vlw";
-  int newFontSize = 18;
-*/
   content = "O";
   newX = 10;
   newY = height - 10;
@@ -127,7 +116,6 @@ void paintPunto(){
   textFont(punto.font);
   punto.visualizeKineticWord();   
 }
-
 
 //****************************************************************************
 
@@ -217,7 +205,6 @@ class KineticWord {
       deltaY = y1 - y2;
       return deltaY;      
   }
-  
-   
+    
 }
 
