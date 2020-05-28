@@ -1,0 +1,37 @@
+int x = 220;
+int y = 200;
+
+void setup(){
+
+// finestra e sfondo
+  size(700,400);
+  background(255);
+
+// ISTRUZIONI PER CREARE E VISUALIZZARE LA STRINGA    
+
+// scelta del font (ossia, il tipo di carattere)
+  font = loadFont("FFScala.ttf"); 
+  textFont(font); 
+
+// dimensione del font (ossia, la grandezza del carattere)
+    textSize(100);
+    
+}
+
+void draw(){
+
+// colore della stringa
+    if (
+        (mouseX >= x) && (mouseX <= x + 230)
+        &&
+       (mouseY >= y - 80) && (mouseY <= y)
+    ) {
+        fill(255, 0, 0);
+    } else {
+        fill(0, 102, 153);
+    }
+
+// visualizzazione della stringa
+    text("Ciao!", x, y);
+      
+}
