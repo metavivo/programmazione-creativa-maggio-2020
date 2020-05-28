@@ -1,0 +1,223 @@
+
+String content;
+int newX;
+int newY;
+String fontName;
+int newFontSize;
+
+int pX, pY;
+
+void setup() {
+
+  size(400, 300);
+  background(255);
+  fill(0);
+  
+  paintAxes();
+
+  
+
+  paintPunto();
+
+
+
+}
+
+
+
+void draw() {
+
+//  content = "Punto" + mouseX;
+  
+  background(255);
+  fill(0);
+  
+  paintAxes();
+
+  stroke(255,0,0);
+  fill(255,0,0);
+  ellipse(mouseX, mouseY, 8, 8);
+
+  fill(0);
+  stroke(0);
+  pX = mouseX - 30;
+  pY = 270 - mouseY;
+
+  paintPunto();
+  
+  stroke(255,0,0);
+  strokeWeight(1);
+  fill(255,0,0);
+  line(pX + 30, height - 30, pX + 30, height - 30 - pY);
+  line(30, height - 30 - pY, pX + 30, height - 30 - pY);
+  fill(0);
+  stroke(0);
+
+  
+}
+
+//----------------------------------------------------------------------------
+
+void paintAxes(){
+
+  strokeWeight(2);
+  line(20, height - 30, width - 20, height - 30);
+  line(30, 10, 30, height - 20);
+  
+  line(width - 30, height - 35, width - 20, height - 30);
+  line(width - 30, height - 25, width - 20, height - 30);
+
+  line(30, 10, 25, 20);
+  line(30, 10, 35, 20);
+  
+  KineticWord origine;
+/*
+  String content = "O";
+  int newX = 10;
+  int newY = height - 10;
+  String fontName = "AlBayan-48.vlw";
+  int newFontSize = 18;
+*/
+  content = "O";
+  newX = 10;
+  newY = height - 10;
+  fontName = "AlBayan-48.vlw";
+  newFontSize = 18;
+  
+  origine = new KineticWord(content, newX, newY, fontName,
+               newFontSize);
+  origine.font = loadFont(fontName);
+  textFont(origine.font);
+  origine.visualizeKineticWord();   
+
+  KineticWord ascissa;
+  content = "X";
+  newX = width - 15;
+  newY = height - 10;
+  newFontSize = 18;
+  ascissa = new KineticWord(content, newX, newY, fontName,
+               newFontSize);
+  ascissa.font = loadFont(fontName);
+  textFont(ascissa.font);
+  ascissa.visualizeKineticWord();   
+
+  KineticWord ordinata;
+  content = "Y";
+  newX = 10;
+  newY = 20;
+  newFontSize = 18;
+  ordinata = new KineticWord(content, newX, newY, fontName,
+               newFontSize);
+  ordinata.font = loadFont(fontName);
+  textFont(ordinata.font);
+  ordinata.visualizeKineticWord();   
+
+}
+
+
+void paintPunto(){
+  KineticWord punto;
+  content = "P(" + pX + "; " + pY + ")";
+  newX = 280;
+  newY = 40;
+  fontName = "AlBayan-48.vlw";
+  newFontSize = 18;
+  punto = new KineticWord(content, newX, newY, fontName, newFontSize);
+  punto.font = loadFont(fontName);
+  textFont(punto.font);
+  punto.visualizeKineticWord();   
+}
+
+
+//****************************************************************************
+
+class KineticWord {
+  String wordText;
+  int fontSize;
+  PFont font;
+  int x, y;
+  float wordWidth, wordHeight;
+  String wordColor;
+  int wordRed, wordGreen, wordBlue;
+  float wordSize;
+  float rotation;
+  float wordAlpha;
+  float wordShearX, wordShearY;
+  
+  KineticWord (String content, int newX, int newY, String fontName,
+               int newFontSize) {
+    wordText = content;
+    x = newX;
+    y = newY;
+    font = loadFont(fontName);
+    fontSize = newFontSize;
+    textFont(font, newFontSize);
+    wordColor = "black";
+    wordWidth = textWidth(wordText);
+    wordHeight = newFontSize;
+    rotation = 0;
+    wordAlpha = 255;
+    wordShearX = 0;
+    wordShearY = 0;
+  }
+
+
+  void visualizeKineticWord() {
+    if (wordColor == "black") {
+       wordRed = 0;
+       wordGreen = 0;
+       wordBlue = 0;
+    }
+    if (wordColor == "blue") {
+       wordRed = 0;
+       wordGreen = 0;
+       wordBlue = 255;
+    }
+    if (wordColor == "pink") {
+       wordRed = 255;
+       wordGreen = 140;
+       wordBlue = 200;
+    }
+    fill(wordRed, wordGreen, wordBlue, wordAlpha);
+    textSize(fontSize);
+    
+    pushMatrix();
+    translate(getRotationDeltaX(), getRotationDeltaY());
+    rotate(rotation);
+    shearX(wordShearX);
+    shearX(wordShearY);
+    text(wordText, x, y);
+    popMatrix();
+  }
+  
+   float getRotationDeltaX() {
+      float x1, x2, y1, r, a1, a2, deltaX; 
+     
+      x1 = x + wordWidth/2;
+      y1 = y + fontSize/2;
+     
+      a1 = atan(y1/x1);
+      a2 = a1 + rotation;
+      r = sqrt(sq(x1) + sq(y1));
+      x2 = r * cos(a2);
+      deltaX = x1 - x2;
+      return deltaX;      
+  }
+  
+    float getRotationDeltaY() {
+      float x1, y1, y2, r, a1, a2, deltaY; 
+     
+      x1 = x;
+      y1 = y;
+     
+      a1 = atan(y1/x1);
+      a2 = a1 + rotation;
+      r = sqrt(sq(x1) + sq(y1));
+      y2 = r * sin(a2);
+      deltaY = y1 - y2;
+      return deltaY;      
+  }
+  
+   
+}
+
