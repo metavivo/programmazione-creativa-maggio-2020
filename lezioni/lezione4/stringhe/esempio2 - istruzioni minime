@@ -1,0 +1,26 @@
+void setup(){
+
+// finestra e sfondo
+  size(700,400);
+  background(255);
+
+// ISTRUZIONI PER CREARE E VISUALIZZARE LA STRINGA    
+
+// scelta del font (ossia, il tipo di carattere)
+  font = loadFont("FFScala.ttf"); 
+  textFont(font); 
+
+// dimensione del font (ossia, la grandezza del carattere)
+    textSize(40);
+    
+// colore della stringa
+    fill(0, 102, 153);
+
+// visualizzazione della stringa
+    text("word", 0, 100);
+  
+}
+
+void draw(){
+
+}
