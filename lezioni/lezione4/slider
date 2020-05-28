@@ -1,0 +1,87 @@
+Slider slider;
+
+void setup(){
+  
+  size(700,400);
+  background(255);
+  smooth();
+
+  slider = new Slider();
+  
+}
+
+void draw(){
+
+  background(255);
+
+  slider.update();
+  slider.display();
+
+}
+
+//**********************************
+
+class Slider {
+
+  int x;
+  int y;
+  
+  int value;
+  int bigWidth;
+  int bigHeight;
+  int smallWidth;
+  int smallHeight;
+  int smallX;
+  
+  
+  Slider() {
+    x = 50;
+    y = 50;
+    value = 0;
+    bigWidth = 300;
+    bigHeight = 10;
+    smallWidth = 10;
+    smallHeight = 30;
+    smallX = x + 5;
+  }
+
+  void update() {
+
+    if(mousePressed) {
+      if ((mouseX >= x) && (mouseX <= x + bigWidth)) {        
+        value = 100 * (mouseX - x)/bigWidth;
+        smallX = x + value * bigWidth/100;
+      }
+    if (mouseX < x) {        
+      value = 0;
+      smallX = x + value * bigWidth/100;
+    }
+    if (mouseX > x + bigWidth) {        
+      value = 100;
+      smallX = x + value * bigWidth/100;
+    }
+
+  
+}
+    
+  }
+
+  void display() {
+    
+    fill(100, 0, 0);
+    rect(x, y, bigWidth, bigHeight);
+    
+    
+    fill(0, 0, 0);
+    rect(smallX, y + bigHeight/2 - smallHeight/2, smallWidth, smallHeight);
+
+    fill(0, 102, 153);
+    textSize(32);
+    text(value, 10, 200); 
+    
+  }
+
+  void checkEdges() {
+
+  }
+}
