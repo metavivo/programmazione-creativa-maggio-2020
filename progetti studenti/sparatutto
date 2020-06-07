@@ -1,0 +1,781 @@
+//****************************************************************
+/*
+
+TITOLO: Sparatutto
+
+AUTORI: Demattè Alice, Tomelin Mattia, Zon Emiliano
+
+*/
+//****************************************************************
+
+stelle = 0;
+
+o=305;
+
+value=0;
+
+k=305;
+
+laser = 0;
+
+ds=305;
+lq=305;
+it=305;
+rf=305;
+jh=305;
+lz=305;
+rv=305;
+f=305;
+
+
+void setup (){
+
+    size (500,500);
+    background (3,0,75);
+
+g=305;
+ 
+        fill(255,255,0);
+    rect(354,122,5,5);
+ 
+    rect(154,432,5,5);
+    
+    rect(194,269,5,5);
+ 
+    rect(223,396,5,5);
+ 
+    rect(395,168,5,5);
+    
+    rect(135,246,5,5);
+ 
+    rect(403,267,5,5);
+ 
+    rect(478,128,5,5);
+ 
+    rect(365,246,5,5);
+ 
+    rect(50,447,5,5);
+ 
+    rect(79,29,5,5);
+ 
+    rect(446,389,5,5);
+ 
+    rect(78,319,5,5);
+    
+    rect(156,134,5,5);
+ 
+    rect(278,232,5,5);
+ 
+    rect(398,27,5,5);
+    
+    rect(31,211,5,5);
+    
+    rect(339,459,5,5);
+    
+    rect(342,327,5,5);
+    
+    rect(41,71,5,5);
+    
+    rect(278,46,5,5);
+    
+    rect(241,198,5,5);
+    
+    rect(124,341,5,5);
+    
+    rect(101,150,5,5);
+    
+    rect(439,441,5,5);
+    
+    rect(129,77,5,5);
+
+  
+    stroke(255,255,255);
+ 
+line(260,350,265,330);
+line(270,350,265,330);
+ 
+    fill(255,0,77);
+rect(250,350,30,80);
+ 
+    fill(0,17,255);
+rect(230,400,70,20);
+ 
+    fill(112,199,255);
+ellipse(265,380,20,20);
+ 
+    
+    stroke(255,255,255);
+ 
+line(260,140,265,150);
+line(270,140,265,150);
+ 
+    fill(43,144,0);
+rect(257,100,15,40);
+ 
+    fill(145,0,255);
+rect(245,105,40,10);
+ 
+    fill(112,199,255);
+ellipse(265,130,10,10);
+ 
+ 
+    stroke(255,255,255);
+ 
+line(213,90,208,100);
+line(203,90,208,100);
+ 
+    fill(43,144,0);
+rect(200,50,15,40);
+ 
+    fill(145,0,255);
+rect(188,55,40,10);
+ 
+    fill(112,199,255);
+ellipse(208,80,10,10);
+ 
+ 
+    stroke(255,255,255);
+ 
+line(317,90,322,100);
+line(326,90,322,100);
+ 
+    fill(43,144,0);
+rect(314,50,15,40);
+ 
+    fill(145,0,255);
+rect(302,55,40,10);
+ 
+    fill(112,199,255);
+ellipse(322,80,10,10);
+ 
+ 
+    stroke(255,255,255);
+ 
+line(441,89,436,99);
+line(431,89,436,99);
+ 
+    fill(43,144,0);
+rect(428,49,15,40);
+ 
+    fill(145,0,255);
+rect(416,54,40,10);
+ 
+    fill(112,199,255);
+ellipse(436,79,10,10);
+ 
+ 
+   stroke(255,255,255);
+ 
+line(89,90,94,100);
+line(99,90,94,100);
+ 
+    fill(43,144,0);
+rect(86,50,15,40);
+ 
+        fill(145,0,255);
+rect(74,55,40,10);
+ 
+    fill(112,199,255);
+ellipse(94,80,10,10);
+ 
+ 
+    stroke(255,255,255);
+ 
+line(384,140,379,150);
+line(374,140,379,150);
+ 
+    fill(43,144,0);
+rect(371,100,15,40);
+ 
+    fill(145,0,255);
+rect(359,105,40,10);
+ 
+    fill(112,199,255); 
+ellipse(379,130,10,10);
+ 
+ 
+    stroke(255,255,255);
+ 
+line(156,140,151,150);
+line(146,140,151,150);
+ 
+    fill(43,144,0);
+rect(143,100,15,40);
+ 
+ 
+    fill(145,0,255);
+rect(131,105,40,10);
+ 
+ 
+    fill(112,199,255);
+ellipse(151,130,10,10);
+
+
+ 
+    fill(255,0,0);
+ 
+     stroke(255,0,0);
+     strokeWeight(3);
+ 
+rect(264,330,1,4);
+ 
+ 
+    fill(255,0,0);
+ 
+     stroke(255,0,0);
+     strokeWeight(3);
+ 
+rect(264,330,1,4);
+ 
+ 
+    fill(255,0,0);
+ 
+     stroke(255,0,0);
+     strokeWeight(3);
+ 
+rect(264,330,1,4);
+ 
+ 
+    fill(255,0,0);
+ 
+     stroke(255,0,0);
+     strokeWeight(3);
+ 
+rect(264,330,1,4);
+ 
+ 
+    fill(255,0,0);
+ 
+     stroke(255,0,0);
+     strokeWeight(3);
+ 
+rect(264,330,1,4);
+ 
+ 
+    fill(255,0,0);
+ 
+     stroke(255,0,0);
+     strokeWeight(3);
+
+rect(264,330,1,4);
+
+
+    fill(255,0,0);
+
+     stroke(255,0,0);
+     strokeWeight(3);
+ 
+rect(264,330,1,4);
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+void draw(){
+ 
+    size (500,500);
+    background (3,0,75);
+ 
+            stelle = stelle + 0.2;
+ 
+            laser = laser - 0.7;
+ 
+        fill(255,255,0);
+    rect(354,122 + stelle,5,5);
+ 
+    rect(154,432 + stelle,5,5);
+    
+    rect(194,269 + stelle,5,5);
+ 
+    rect(223,396 + stelle,5,5);
+ 
+    rect(395,168 + stelle,5,5);
+    
+    rect(135,246 + stelle,5,5);
+ 
+    rect(403,267 + stelle,5,5);
+ 
+    rect(478,128 + stelle,5,5);
+ 
+    rect(365,246 + stelle,5,5);
+ 
+    rect(50,447 + stelle,5,5);
+ 
+    rect(79,29 + stelle,5,5);
+ 
+    rect(446,389 + stelle,5,5);
+ 
+    rect(78,319 + stelle,5,5);
+    
+    rect(156,134 + stelle,5,5);
+ 
+    rect(278,232 + stelle,5,5);
+ 
+    rect(398,27 + stelle,5,5);
+    
+    rect(31,211 + stelle,5,5);
+    
+    rect(339,459 + stelle,5,5);
+    
+    rect(342,327 + stelle,5,5);
+    
+    rect(41,71 + stelle,5,5);
+    
+    rect(278,46 + stelle,5,5);
+    
+    rect(241,198 + stelle,5,5);
+    
+    rect(124,341 + stelle,5,5);
+    
+    rect(101,150 + stelle,5,5);
+    
+    rect(439,441 + stelle,5,5);
+    
+    rect(129,77 + stelle,5,5);
+ 
+ 
+    rect(354,122 + stelle - 500,5,5);
+ 
+    rect(154,432 + stelle - 500,5,5);
+    
+    rect(194,269 + stelle - 500,5,5);
+ 
+    rect(223,396 + stelle - 500,5,5);
+ 
+    rect(395,168 + stelle - 500,5,5);
+    
+    rect(135,246 + stelle - 500,5,5);
+ 
+    rect(403,267 + stelle - 500,5,5);
+ 
+    rect(478,128 + stelle - 500,5,5);
+ 
+    rect(365,246 + stelle - 500,5,5);
+ 
+    rect(50,447 + stelle - 500,5,5);
+ 
+    rect(79,29 + stelle - 500,5,5);
+ 
+    rect(446,389 + stelle - 500,5,5);
+ 
+    rect(78,319 + stelle - 500,5,5);
+    
+    rect(156,134 + stelle - 500,5,5);
+ 
+    rect(278,232 + stelle - 500,5,5);
+ 
+    rect(398,27 + stelle - 500,5,5);
+    
+    rect(31,211 + stelle - 500,5,5);
+    
+    rect(339,459 + stelle - 500,5,5);
+    
+    rect(342,327 + stelle - 500,5,5);
+    
+    rect(41,71 + stelle - 500,5,5);
+    
+    rect(278,46 + stelle - 500,5,5);
+    
+    rect(241,198 + stelle - 500,5,5);
+    
+    rect(124,341 + stelle - 500,5,5);
+    
+    rect(101,150 + stelle - 500,5,5);
+    
+    rect(439,441 + stelle - 500,5,5);
+    
+    rect(129,77 + stelle - 500,5,5);
+ 
+   
+    rect(354,122 + stelle - 1000,5,5);
+ 
+    rect(154,432 + stelle - 1000,5,5);
+    
+    rect(194,269 + stelle - 1000,5,5);
+ 
+    rect(223,396 + stelle - 1000,5,5);
+ 
+    rect(395,168 + stelle - 1000,5,5);
+    
+    rect(135,246 + stelle - 1000,5,5);
+ 
+    rect(403,267 + stelle - 1000,5,5);
+ 
+    rect(478,128 + stelle - 1000,5,5);
+ 
+    rect(365,246 + stelle - 1000,5,5);
+ 
+    rect(50,447 + stelle - 1000,5,5);
+ 
+    rect(79,29 + stelle - 1000,5,5);
+ 
+    rect(446,389 + stelle - 1000,5,5);
+ 
+    rect(78,319 + stelle - 1000,5,5);
+    
+    rect(156,134 + stelle - 1000,5,5);
+ 
+    rect(278,232 + stelle - 1000,5,5);
+ 
+    rect(398,27 + stelle - 1000,5,5);
+    
+    rect(31,211 + stelle - 1000,5,5);
+    
+    rect(339,459 + stelle - 1000,5,5);
+    
+    rect(342,327 + stelle - 1000,5,5);
+    
+    rect(41,71 + stelle - 1000,5,5);
+    
+    rect(278,46 + stelle - 1000,5,5);
+    
+    rect(241,198 + stelle - 1000,5,5);
+    
+    rect(124,341 + stelle - 1000,5,5);
+    
+    rect(101,150 + stelle - 1000,5,5);
+    
+    rect(439,441 + stelle - 1000,5,5);
+    
+    rect(129,77 + stelle - 1000,5,5);
+ 
+ 
+    rect(354,122 + stelle - 1500,5,5);
+ 
+    rect(154,432 + stelle - 1500,5,5);
+    
+    rect(194,269 + stelle - 1500,5,5);
+ 
+    rect(223,396 + stelle - 1500,5,5);
+ 
+    rect(395,168 + stelle - 1500,5,5);
+    
+    rect(135,246 + stelle - 1500,5,5);
+ 
+    rect(403,267 + stelle - 1500,5,5);
+ 
+    rect(478,128 + stelle - 1500,5,5);
+ 
+    rect(365,246 + stelle - 1500,5,5);
+ 
+    rect(50,447 + stelle - 1500,5,5);
+ 
+    rect(79,29 + stelle - 1500,5,5);
+ 
+    rect(446,389 + stelle - 1500,5,5);
+ 
+    rect(78,319 + stelle - 1500,5,5);
+    
+    rect(156,134 + stelle - 1500,5,5);
+ 
+    rect(278,232 + stelle - 1500,5,5);
+ 
+    rect(398,27 + stelle - 1500,5,5);
+    
+    rect(31,211 + stelle - 1500,5,5);
+    
+    rect(339,459 + stelle - 1500,5,5);
+    
+    rect(342,327 + stelle - 1500,5,5);
+    
+    rect(41,71 + stelle - 1500,5,5);
+    
+    rect(278,46 + stelle - 1500,5,5);
+    
+    rect(241,198 + stelle - 1500,5,5);
+    
+    rect(124,341 + stelle - 1500,5,5);
+    
+    rect(101,150 + stelle - 1500,5,5);
+    
+    rect(439,441 + stelle - 1500,5,5);
+    
+    rect(129,77 + stelle - 1500,5,5);
+ 
+ 
+  float period = 120;
+  float amplitude = 20;
+  float x = amplitude * cos(TWO_PI * frameCount / period);
+ 
+
+    stroke(255,255,255);
+ 
+line(mouseX - 10,350,mouseX,330);
+line(mouseX + 10,350,mouseX,330);
+
+    fill(255,0,77);
+rect(mouseX - 15,350,30,80);
+ 
+    fill(0,17,255);
+rect(mouseX - 35,400,70,20);
+ 
+    fill(112,199,255);
+ellipse(mouseX,380,20,20);
+
+
+     if(mouseX>=460){
+            mouseX=460;
+     }
+
+        if(mouseX<=40){
+            mouseX=40;
+        }
+
+
+
+    stroke(255,255,255);
+ 
+line(260 + x,140,265 + x,150);
+line(270 + x,140,265 + x,150);
+
+    fill(43,144,0);
+rect(257 + x,100,15,40);
+ 
+    fill(145,0,255);
+rect(245 + x,105,40,10);
+ 
+    fill(112,199,255);
+ellipse(265 + x,130,10,10);
+ 
+ 
+    stroke(255,255,255);
+ 
+line(213 + x,90,208 + x,100);
+line(203 + x,90,208 + x,100);
+ 
+    fill(43,144,0);
+rect(200 + x,50,15,40);
+ 
+    fill(145,0,255);
+rect(188 + x,55,40,10);
+ 
+    fill(112,199,255);
+ellipse(208 + x,80,10,10);
+ 
+ 
+    stroke(255,255,255);
+ 
+line(317 + x,90,322 + x,100);
+line(326 + x,90,322 + x,100);
+ 
+    fill(43,144,0);
+rect(314 + x,50,15,40);
+ 
+    fill(145,0,255);
+rect(302 + x,55,40,10);
+ 
+    fill(112,199,255);
+ellipse(322 + x,80,10,10);
+ 
+ 
+    stroke(255,255,255);
+ 
+line(441 + x,89,436 + x,99);
+line(431 + x,89,436 + x,99);
+ 
+    fill(43,144,0);
+rect(428 + x,49,15,40);
+ 
+    fill(145,0,255);
+rect(416 + x,54,40,10);
+ 
+    fill(112,199,255);
+ellipse(436 + x,79,10,10);
+ 
+ 
+    stroke(255,255,255);
+ 
+line(89 + x,90,94 + x,100);
+line(99 + x,90,94 + x,100);
+ 
+    fill(43,144,0);
+rect(86 + x,50,15,40);
+ 
+    fill(145,0,255);
+rect(74 + x,55,40,10);
+ 
+    fill(112,199,255);
+ellipse(94 + x,80,10,10);
+ 
+ 
+    stroke(255,255,255);
+ 
+line(384 + x,140,379 + x,150);
+line(374 + x,140,379 + x,150);
+ 
+    fill(43,144,0);
+rect(371 + x,100,15,40);
+ 
+    fill(145,0,255);
+rect(359 + x,105,40,10);
+ 
+    fill(112,199,255);
+ellipse(379 + x,130,10,10);
+ 
+ 
+    stroke(255,255,255);
+
+line(156 + x,140,151 + x,150); 
+line(146 + x,140,151 + x,150);
+ 
+    fill(43,144,0);
+rect(143 + x,100,15,40);
+ 
+    fill(145,0,255);
+rect(131 + x,105,40,10);
+ 
+    fill(112,199,255);
+ellipse(151 + x,130,10,10);
+
+
+
+     fill(255,0,0);
+
+    stroke(255,0,0);
+   strokeWeight(3);
+
+rect(mouseX - 1,330,1,4);
+
+
+     fill(255,0,0);
+
+    stroke(255,0,0);
+   strokeWeight(3);
+
+rect(mouseX - 1,330,1,4);
+
+
+     fill(255,0,0);
+
+    stroke(255,0,0);
+   strokeWeight(3);
+
+rect(mouseX - 1,330,1,4);
+
+
+     fill(255,0,0);
+
+    stroke(255,0,0);
+   strokeWeight(3);
+
+rect(mouseX - 1,330,1,4);
+
+
+     fill(255,0,0);
+
+    stroke(255,0,0);
+   strokeWeight(3);
+
+rect(mouseX - 1,330,1,4);
+
+
+     fill(255,0,0);
+
+    stroke(255,0,0);
+   strokeWeight(3);
+ 
+rect(mouseX - 1,330,1,4);
+ 
+ 
+     fill(255,0,0);
+
+    stroke(255,0,0);
+   strokeWeight(3);
+ 
+rect(mouseX - 1,330,1,4);
+ 
+ 
+
+
+  if(value>=1){
+    f=f-1;
+//     rect(mouseX-1,f,1,30);
+      rect(x_raggio,f,1,30);
+  }
+
+  if(value>=2){
+    o=o-1;
+//     rect(mouseX-1,o,1,30);
+     rect(x_raggio,o,1,30);
+  }
+
+  if(value>=3){
+    k=k-1;
+//     rect(mouseX-1,k,1,30);
+     rect(x_raggio,k,1,30);
+  }
+
+    if(value>=4){
+        ds=ds-1;
+//            rect(mouseX-1,ds,1,30);
+            rect(x_raggio,ds,1,30);
+    }
+
+    if(value>=5){
+        lq=lq-1;
+//            rect(mouseX-1,lq,1,30);
+            rect(x_raggio,lq,1,30);
+    }
+
+    if(value>=6){
+        it=it-1;
+//            rect(mouseX-1,it,1,30);
+            rect(x_raggio,it,1,30);
+    }
+
+    if(value>=7){
+        rf=rf-1;
+//            rect(mouseX-1,rf,1,30);
+            rect(x_raggio,rf,1,30);
+    }
+
+    if(value>=8){
+        jh=jh-1;
+//            rect(mouseX-1,jh,1,30);
+            rect(x_raggio,jh,1,30);
+    }
+
+    if(value>=9){
+        lz=lz-1;
+//            rect(mouseX-1,lz,1,30);
+            rect(x_raggio,lz,1,30);
+    }
+
+    if(value>=10){
+        rv=rv-1;
+//            rect(mouseX-1,rv,1,30);
+            rect(x_raggio,rv,1,30);
+    }
+ 
+}
+
+
+
+    void mouseClicked(){
+        if(value==value){
+            value=value+1;
+    }
+         x_raggio = mouseX - 1;
+/*
+        if(mouseX - 1 == value){
+            x_raggio = value;
+        }
+*/
+/*
+        if(mouseClicked){
+            x_raggio1 = x_raggio;
+            x_raggio = x;
+            x_raggio1 = mouseX - 1;
+    }
+*/
+}
