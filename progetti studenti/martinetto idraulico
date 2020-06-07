@@ -1,0 +1,72 @@
+//****************************************************************
+/*
+
+TITOLO: Martinetto idraulico
+
+AUTORI: 
+Debora Bertagnolli, Emma Boccher, Elisa Pecoraro, Maia Zini
+*/
+//****************************************************************
+
+
+// coordinate e dimensioni pistoni
+x1= 50;
+x2= 250;
+y1= 150;
+y2= 150;
+lx1= 70;
+lx2= 200;
+ly1= 40;
+ly2= 40;
+
+lfreccia = 66;
+
+void setup() {  
+    
+    background(255);
+    size(500, 400);     
+} 
+
+void draw() {  
+
+    background(255);
+    
+    //martinetto idraulico
+    strokeWeight(3);
+    stroke(0);
+    line(50, 0, 50, 400);
+    line(50, 400, 450, 400);
+    line(450, 400, 450, 0);
+    line(120, 0, 120, 350);
+    line(120, 350, 250, 350);
+    line(250, 350, 250, 0);
+    
+    //fluido
+    fill(128, 247, 255);
+    stroke(128, 247, 255);
+    rect(55, mouseY - ly1/2, 60, 450 + mouseY);
+    rect(115, 355, 140, 45);
+    rect(255, -mouseY + 150, 190, 700);
+
+
+    //pistoni
+    stroke(121, 116, 116);
+    fill(121, 116, 116);
+    rect(x1, mouseY - ly1/2, lx1, ly1);
+    rect(x2, -mouseY + 150, lx2, ly2);
+    
+
+    //frecce
+    strokeWeight(2);
+    
+    stroke(253, 0, 0);
+    line(x1 + lx1/2, mouseY, 85, mouseY + lfreccia);
+    line(85, mouseY + 70, 80, mouseY + lfreccia);
+    line(85, mouseY + 70, 90, mouseY + lfreccia);
+
+    stroke(0, 8, 242);
+    line(350, -mouseY + 150 + ly2/2, 350, -mouseY + 150 - 77);
+    line(350, -mouseY + 150 - 80, 345, -mouseY + 75 );
+    line(350, -mouseY + 150 - 80, 355, -mouseY + 75);
+     
+}
