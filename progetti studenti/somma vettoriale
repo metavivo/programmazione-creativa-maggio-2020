@@ -1,0 +1,78 @@
+//****************************************************************
+/*
+
+TITOLO: Somma vettoriale
+
+AUTORI: Giulia Benedetti, Caterina Cimatti, Benedetta Dusini, Elena Mattiello
+
+*/
+//****************************************************************
+
+
+
+
+int valore = 0;
+
+int x1;
+int y1;
+int x2;
+int y2;
+int ax;
+int ay;
+int by;
+int bx;
+float a;
+font = loadFont("FFScala.ttf"); 
+
+
+void setup(){
+    size(800,600);
+    background(255);
+    line(400, 0, 400, 600);
+    line(0, 300, 800, 300);
+}
+
+void draw(){
+
+    if (mousePressed == true) {
+        
+        if (valore == 0) {
+            x1 = mouseX;
+            y1 = mouseY;
+            stroke(0);
+            strokeWeight(2); 
+            line(x1, y1, 400, 300);           
+        }    
+        if (valore == 1) {
+            x2 = mouseX;
+            y2 = mouseY;
+             stroke(0);
+             strokeWeight(2); 
+            line(x2, y2, 400, 300);
+             ax = (x1 + x2) - 400;             //coordinate vettore somma nel sistema di riferimento computer
+             ay = (y1 + y2) - 300;
+             bx = (x1 - 400) + (x2 - 400);      //coordinate vettore somma nel sistema di riferimento nostro
+             by = -((y1 - 300) + (y2 - 300));
+            stroke(255,0,0); 
+            strokeWeight(3);  
+            line(ax, ay, 400, 300);   
+            textFont(font);
+            textSize(30);
+            fill(0)
+            text("x=" + bx, 15, 35);
+            text("y=" + by, 15, 60);
+            a = round(sqrt(bx * bx + by * by));    //lunghezza vettore
+            text("l=" + a, 15, 95);
+           
+        }     
+    }
+}
+
+
+void mouseClicked() {
+  if (valore == 0) {
+    valore = 1;
+  } else {
+    valore = 0;
+  }
+}
