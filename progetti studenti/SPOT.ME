@@ -1,0 +1,80 @@
+//****************************************************************
+/*
+
+TITOLO: SPOT.ME
+
+AUTORI: Lorenzo Giovannini, Pietro Molinari, Sean O'Dwyer
+
+*/
+//****************************************************************
+
+//variabili
+int punti;
+punti = 0;
+float ra;
+ra = 30;
+float rb;
+rb = 40;
+float D; 
+ 
+void setup(){
+    frameRate(60)
+}
+ 
+void draw(){
+ 
+  background(0, 0, 77);
+   size(800,700);
+   
+//testo     
+    fill(255);
+    textSize(27);
+    text(punti,730,40);
+ 
+//cosi che girano a caso
+ 
+float x;
+x = random(800);
+float y;
+y = random(700);  
+ 
+fill(random(225), random(225), random(225));
+ellipse (x,y,40,40);
+ 
+frameRate(60)
+//ufo
+stroke(179, 255, 255);
+strokeWeight (18);
+    fill(random(255),random(255),random(102));
+   //ellipse(100, 200, 30, 30);
+   //ellipse(mouseX, 200, 30, 30);
+   //ellipse(100, mouseY, 30, 30);
+   //ellipse(mouseX, mouseY, 30, 30);
+ 
+//movimento del mouse = ufo si muove
+    ellipse(mouseX, mouseY, 30, 30);
+   
+D = sqrt(pow(x - mouseX, 2)+ pow(y - mouseY, 2));
+ 
+if(D <=(ra+rb)){
+    punti = punti+1
+ 
+}
+ 
+if(punti >= 333){
+    frameRate(10)
+    background (random(255),random(255),random(255));
+    size(800,700);
+    fill(255, 214, 51);
+    textSize(850);
+    text("⚝",45,620);
+    ellipse(400,350, 500,500);
+    fill(random(255),random(255),random(255));
+    frameRate(10);
+    textSize(80);
+    text("WINNER",240,450);
+    textSize(230);
+    text("♕",285,360)
+    } 
+      
+}
